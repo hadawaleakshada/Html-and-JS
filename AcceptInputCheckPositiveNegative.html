@@ -1,0 +1,48 @@
+<html>
+
+<head></head>
+<title>check positive negative numbers</title>
+<script>
+    function checkNumber() {
+        let number =document.getElementById("positive").value;
+        let array = number.split(',');
+        let negativeNumberArray = [];
+        let positiveNumberArray = [];
+        for (let i = 0; i <= array.length; i++) {
+            if(array[i]==0)
+        {
+            console.log("zero is satisfy both condition:"+array);
+        }
+            
+             else if (array[i]>0) {
+                positiveNumberArray.push(array[i]);
+
+                
+
+            }
+            else {
+                negativeNumberArray.push(array[i]);
+                
+
+            }
+        }
+        document.getElementById("resultPositive").innerText = "the positive number array: " + positiveNumberArray;
+        document.getElementById("resultNegative").innerText = "the negative number array: " + negativeNumberArray;
+        document.getElementById("result").innerText = "both the conditions are satisfy for "+array;
+
+
+    }
+</script>
+</head>
+
+<body>
+    <label>Enter any number:</label>
+    <input type="text" id="positive" />
+    <button onclick="checkNumber()">check positive or negative</button>
+    <div id="result"></div>
+    <div id="resultPositive"></div>
+    <div id="resultNegative"></div>
+
+</body>
+
+</html>

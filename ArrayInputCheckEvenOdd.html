@@ -1,0 +1,39 @@
+<html>
+<head>
+    
+    <title>divide the even and odd arrays</title>
+    <script>
+        function EvenOddArray(){
+        let input=document.getElementById("EvenOdd").value;
+        // let array=[];
+        let array=input.split(',');
+        let evenArray= [];
+        let oddArray= [];
+        for(let i=0;i<array.length;i++){
+            if( array[i]%2==0)
+        {
+            evenArray.push(array[i]);
+            document.getElementById("resultEven").innerText ="the even array is:" +evenArray;
+            
+        }
+        else
+        {
+            oddArray.push(array[i]);
+            document.getElementById("resultOdd").innerText = "the odd array is:"+oddArray;
+        }
+
+        }
+    }
+
+
+    </script>
+</head>
+<body>
+    <label>Enter the Array</label>
+    <input type="text" id="EvenOdd">
+    <button onclick="EvenOddArray()">Check EvenOdd Array</button>
+    <div id="resultEven"></div>
+    <div id="resultOdd"></div>
+    
+</body>
+</html>
